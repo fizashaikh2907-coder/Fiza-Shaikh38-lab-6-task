@@ -1,0 +1,79 @@
+Question 1: Count the frequency of each number.
+
+numbers = [2, 3, 2, 5, 3, 2, 5, 8]
+
+frequency = {}
+
+for num in numbers:
+    if num in frequency:
+        frequency[num] += 1
+    else:
+        frequency[num] = 1
+
+print(frequency)
+
+Output:
+
+{2: 3, 3: 2, 5: 2, 8: 1}
+
+
+Question 2: Find all students with the highest marks.
+
+marks = {
+    'Ali': 85,
+    'Sara': 95,
+    'Ahmed': 95,
+    'Noor': 78
+}
+
+highest = max(marks.values())
+
+for student, mark in marks.items():
+    if mark == highest:
+        print(student, mark)
+
+Output:
+
+Sara 95
+Ahmed 95
+
+
+Question 3: Reverse a dictionary
+
+data = {'a': 1, 'b': 2, 'c': 3}
+
+reversed_data = {}
+
+for key, value in data.items():
+    reversed_data[value] = key
+
+print(reversed_data)
+
+Output:
+
+{1: 'a', 2: 'b', 3: 'c'}
+
+
+Question 4: Group words by their first letter.
+
+words = ['apple', 'ant', 'banana', 'ball', 'cat']
+
+result = {}
+
+for word in words:
+    first_letter = word[0]
+
+    if first_letter in result:
+        result[first_letter].append(word)
+    else:
+        result[first_letter] = [word]
+
+print(result)
+
+Output:
+
+{
+    'a': ['apple', 'ant'],
+    'b': ['banana', 'ball'],
+    'c': ['cat']
+}
